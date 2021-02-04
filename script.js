@@ -20,16 +20,10 @@ prev.addEventListener('click', () => {
   prevCard();
 })
 
-addEventListener('keydown', (e) => {
-  if (e.DOM_KEY_LOCATION_LEFT) {
-    e.preventDefault();
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft') {
     prevCard();
-  } 
-})
-
-addEventListener('keydown', (e) => {
-  if (e.DOM_KEY_LOCATION_RIGHT) {
-    e.preventDefault();
+  } else if (e.key === 'ArrowRight') {
     nextCard();
-  } 
-})
+  }
+});
