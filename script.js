@@ -19,3 +19,17 @@ next.addEventListener('click', () => {
 prev.addEventListener('click', () => {
   prevCard();
 })
+
+addEventListener('keydown', (e) => {
+  if (e.DOM_KEY_LOCATION_LEFT) {
+    e.preventDefault();
+    prevCard();
+  } 
+})
+
+addEventListener('keydown', (e) => {
+  if (e.DOM_KEY_LOCATION_RIGHT) {
+    e.preventDefault();
+    nextCard();
+  } 
+})
